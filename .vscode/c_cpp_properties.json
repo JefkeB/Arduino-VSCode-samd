@@ -1,0 +1,40 @@
+{
+    "env": {
+        "stm32.family": "STM32F1xx",
+        "stm32.proc": "STM32F103xB",
+        "stm32.board": "PILL_F103XX",
+        "arduino.stm32" : "D:/Dev-Tools/Arduino_Core_STM32"
+    },
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${arduino.stm32}/cores/**",
+                "${arduino.stm32}/system/${stm32.family}",
+                "${arduino.stm32}/system/Drivers/CMSIS/Device/ST/${stm32.family}/Include",
+                "${arduino.stm32}/system/Drivers/CMSIS/Include",
+                "${arduino.stm32}/libraries/**",
+                "${arduino.stm32}/system/Drivers/${stm32.family}_HAL_Driver/Inc",
+                "${arduino.stm32}/variants/${stm32.board}",
+                "D:/Dev-Tools/CMSIS_5/CMSIS/Core/Include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "${stm32.family}",
+                "${stm32.proc}",
+                "BOARD_NAME=${stm32.board}",
+                "ARDUINO=10810",
+                "ARDUINO_ARCH_STM32",
+                "HAL_UART_MODULE_ENABLED"
+            ],
+            "compilerPath": "D:/Dev-Tools/gcc-arm-8/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "executable": "./bin/firmware.elf",
+            "name": "SAMDD OpenOCD",
+            "runToMain": true,
+            "preLaunchTask": "build",
+            "preLaunchCommands": [
+            ],
+            "postLaunchCommands": [
+            ],
+            "device": "at91samd21j18",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/at91samdXX.cfg"
+            ],
+            "showDevDebugOutput": false,
+            "internalConsoleOptions": "openOnSessionStart",     
+            "svdFile": "${workspaceFolder}/svd/${config:cortex.device}.svd",               
+        }
+    ]
+}
